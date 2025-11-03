@@ -1,50 +1,29 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Constitution for Our Web-Based Game
 
-## Core Principles
+## 1. Vision
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+Our primary vision is to create a fun, engaging, and accessible web-based game that can be played by anyone, anywhere, without the need for installation. The game should be lightweight, responsive, and visually appealing.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+## 2. Gameplay Principles
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+- **Easy to Learn, Hard to Master:** The game should be simple enough for new players to pick up quickly, but with enough depth to keep them engaged long-term.
+- **Player First:** All design and development decisions should prioritize the player's experience.
+- **Fair Play:** The game should be balanced and fair. Any in-game purchases should not create a "pay-to-win" environment.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+## 3. Technical Principles
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+- **Web First:** The game will be built using standard web technologies (HTML5, CSS3, JavaScript/TypeScript) to ensure maximum compatibility across modern browsers.
+- **Performance:** The game must be optimized for performance to run smoothly on a wide range of devices, including low-end laptops and mobile devices.
+- **Open Source:** We will use open-source libraries and frameworks where possible and contribute back to the community.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## 4. Community
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+- **Feedback:** We will actively listen to player feedback and use it to improve the game.
+- **Transparency:** We will be transparent with our community about the development process, including our successes and failures.
+- **Inclusivity:** We will foster a welcoming and inclusive community for all players.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## 5. Monetization
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
-
-## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
-
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+- **Ethical Monetization:** If the game is monetized, it will be done in an ethical and transparent manner.
+- **Value:** Any in-game purchases should provide real value to the player.
+- **No Pay-to-Win:** As stated in the gameplay principles, monetization will not create an unfair advantage for paying players.
