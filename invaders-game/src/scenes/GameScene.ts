@@ -27,7 +27,25 @@ export class GameScene extends Phaser.Scene {
     }
 
     create(): void {
-        this.player = this.physics.add.sprite(400, 550, 'player').setCollideWorldBounds(true);
+        const { width, height } = this.cameras.main;
+
+        // Reset game state variables
+        this.score = 0;
+        this.lives = 3;
+        this.alienVelocity = 100;
+        this.isGameOver = false;
+        this.bullet = null;
+
+        this.physics.resume();
+
+        // Destroy existing game objects if they exist from a previous run
+        if (this.player) this.player.destroy();
+        if (this.scoreText) this.scoreText.destroy();
+        if (this.livesText) this.livesText.destroy();
+        if (this.aliens) this.aliens.destroy();
+        if (this.alienBullets) this.alienBullets.destroy();
+
+        this.player = this.physics.add.sprite(width / 2, height - 50, 'player').setCollideWorldBounds(true);
         this.cursors = this.input.keyboard!.createCursorKeys();
         this.fireButton = this.input.keyboard!.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
@@ -38,7 +56,7 @@ export class GameScene extends Phaser.Scene {
         this.createAliens();
 
         this.scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', color: '#fff' });
-        this.livesText = this.add.text(600, 16, 'Lives: 3', { fontSize: '32px', color: '#fff' });
+        this.livesText = this.add.text(width - 16, 16, 'Lives: 3', { fontSize: '32px', color: '#fff' }).setOrigin(1, 0);
 
         this.alienBullets = this.physics.add.group();
         this.time.addEvent({
@@ -104,9 +122,10 @@ export class GameScene extends Phaser.Scene {
     }
 
     private createAliens(): void {
+        const { width } = this.cameras.main;
         for (let i = 0; i < 5; i++) {
             for (let j = 0; j < 5; j++) {
-                const alien = this.aliens.create(100 + i * 70, 100 + j * 50, 'alien');
+                const alien = this.aliens.create(width / 2 - 150 + i * 70, 100 + j * 50, 'alien');
                 alien.setCollideWorldBounds(true);
                 alien.setScale(0.5); // Make aliens smaller to prevent overlap
             }
@@ -115,6 +134,7 @@ export class GameScene extends Phaser.Scene {
     }
 
     private checkAlienPosition(): void {
+        const { height } = this.cameras.main;
         let moveDown = false;
         (this.aliens.getChildren() as Phaser.Physics.Arcade.Sprite[]).forEach((alien) => {
             if (!alien.body) return;
@@ -122,7 +142,7 @@ export class GameScene extends Phaser.Scene {
             if (body.right > this.physics.world.bounds.width || body.left < 0) {
                 moveDown = true;
             }
-            if (alien.y > 500) {
+            if (alien.y > height - 100) { // Adjust game over line relative to screen height
                 this.gameOver();
             }
         });
@@ -140,6 +160,6 @@ export class GameScene extends Phaser.Scene {
         if (this.isGameOver) return;
         this.isGameOver = true;
         this.physics.pause();
-        this.add.text(400, 300, 'Game Over', { fontSize: '64px', color: '#fff' }).setOrigin(0.5);
+        this.scene.start('GameOverScene');
     }
 }

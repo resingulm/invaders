@@ -23,6 +23,7 @@ tests/
 TypeScrip: Follow standard conventions
 
 ## Recent Changes
+- 001-game-display-enhancements: Added TypeScrip + Phaser 3
 
 - 002-game-lifecycle-ui: Added TypeScrip + Phaser 3
 

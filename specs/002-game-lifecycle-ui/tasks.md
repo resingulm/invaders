@@ -7,8 +7,8 @@
 
 **Purpose**: Create the new scene files that will be used in this feature.
 
-- [ ] T001 Create a new file for the splash screen scene at `invaders-game/src/scenes/SplashScreenScene.ts`.
-- [ ] T002 Create a new file for the game over scene at `invaders-game/src/scenes/GameOverScene.ts`.
+- [x] T001 Create a new file for the splash screen scene at `invaders-game/src/scenes/SplashScreenScene.ts`.
+- [x] T002 Create a new file for the game over scene at `invaders-game/src/scenes/GameOverScene.ts`.
 
 ---
 
@@ -20,10 +20,10 @@
 
 ### Implementation for User Story 1
 
-- [ ] T003 [US1] Implement the basic structure of the `SplashScreenScene` in `invaders-game/src/scenes/SplashScreenScene.ts`.
-- [ ] T004 [US1] Add a text element to the `SplashScreenScene` to serve as a placeholder for a splash image in `invaders-game/src/scenes/SplashScreenScene.ts`.
-- [ ] T005 [US1] Implement a 5-second timer in the `create` method of `SplashScreenScene` that transitions to the `GameScene` in `invaders-game/src/scenes/SplashScreenScene.ts`.
-- [ ] T006 [US1] Update the main game configuration in `invaders-game/src/main.ts` to load and start the `SplashScreenScene` first.
+- [x] T003 [US1] Implement the basic structure of the `SplashScreenScene` in `invaders-game/src/scenes/SplashScreenScene.ts`.
+- [x] T004 [US1] Add a text element to the `SplashScreenScene` to serve as a placeholder for a splash image in `invaders-game/src/scenes/SplashScreenScene.ts`.
+- [x] T005 [US1] Implement a 5-second timer in the `create` method of `SplashScreenScene` that transitions to the `GameScene` in `invaders-game/src/scenes/SplashScreenScene.ts`.
+- [x] T006 [US1] Update the main game configuration in `invaders-game/src/main.ts` to load and start the `SplashScreenScene` first.
 
 ---
 
@@ -35,11 +35,11 @@
 
 ### Implementation for User Story 2
 
-- [ ] T007 [US2] Implement the basic structure of the `GameOverScene` in `invaders-game/src/scenes/GameOverScene.ts`.
-- [ ] T008 [US2] Add "Restart" and "Quit" button text elements to the `GameOverScene` in `invaders-game/src/scenes/GameOverScene.ts`.
-- [ ] T009 [US2] Implement the "Restart" button logic in `GameOverScene` to restart the `GameScene` in `invaders-game/src/scenes/GameOverScene.ts`.
-- [ ] T010 [US2] Implement the "Quit" button logic in `GameOverScene` to close the browser window in `invaders-game/src/scenes/GameOverScene.ts`.
-- [ ] T011 [US2] Modify the `gameOver` method in `invaders-game/src/scenes/GameScene.ts` to transition to the `GameOverScene` instead of displaying "Game Over" text.
+- [x] T007 [US2] Implement the basic structure of the `GameOverScene` in `invaders-game/src/scenes/GameOverScene.ts`.
+- [x] T008 [US2] Add "Restart" and "Quit" button text elements to the `GameOverScene` in `invaders-game/src/scenes/GameOverScene.ts`.
+- [x] T009 [US2] Implement the "Restart" button logic in `GameOverScene` to restart the `GameScene` in `invaders-game/src/scenes/GameOverScene.ts`.
+- [x] T010 [US2] Implement the "Quit" button logic in `GameOverScene` to close the browser window in `invaders-game/src/scenes/GameOverScene.ts`.
+- [x] T011 [US2] Modify the `gameOver` method in `invaders-game/src/scenes/GameScene.ts` to transition to the `GameOverScene` instead of displaying "Game Over" text.
 
 ---
 
