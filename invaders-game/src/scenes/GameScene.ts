@@ -108,6 +108,7 @@ export class GameScene extends Phaser.Scene {
             for (let j = 0; j < 5; j++) {
                 const alien = this.aliens.create(100 + i * 70, 100 + j * 50, 'alien');
                 alien.setCollideWorldBounds(true);
+                alien.setScale(0.5); // Make aliens smaller to prevent overlap
             }
         }
         this.aliens.setVelocityX(this.alienVelocity);
