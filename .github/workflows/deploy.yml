@@ -10,7 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      
+
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
     - name: Configure Git
       run: |
         git config --global user.name "${{ github.actor }}"
@@ -22,11 +27,6 @@ jobs:
       working-directory: ./invaders-game
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
