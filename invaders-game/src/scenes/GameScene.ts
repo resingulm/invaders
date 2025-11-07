@@ -21,9 +21,12 @@ export class GameScene extends Phaser.Scene {
     }
 
     preload(): void {
-        this.load.image('player', 'assets/player-ship.png');
-        this.load.image('alien', 'assets/alien.png');
-        this.load.image('bullet', 'assets/bullet.png');
+        this.load.image('player', 'assets/images/player-ship.png');
+        this.load.image('alien', 'assets/images/alien.png');
+        this.load.image('bullet', 'assets/images/bullet.png');
+        this.load.audio('laser_shoot', 'assets/sounds/laser_shoot.wav');
+        this.load.audio('explosion', 'assets/sounds/explosion.wav');
+        this.load.audio('player_hit', 'assets/sounds/player_hit.wav');
     }
 
     create(): void {
@@ -77,6 +80,7 @@ export class GameScene extends Phaser.Scene {
             bullet.destroy();
             this.lives--;
             this.livesText.setText('Lives: ' + this.lives);
+            this.sound.play('player_hit');
             if (this.lives === 0) {
                 this.gameOver();
             }
@@ -99,12 +103,14 @@ export class GameScene extends Phaser.Scene {
         if (this.fireButton.isDown && !this.bullet) {
             this.bullet = this.physics.add.sprite(this.player.x, this.player.y, 'bullet');
             this.bullet.setVelocityY(-300);
+            this.sound.play('laser_shoot');
             this.physics.add.collider(this.bullet, this.aliens, (bullet, alien) => {
                 bullet.destroy();
                 alien.destroy();
                 this.bullet = null;
                 this.score += 10;
                 this.scoreText.setText('Score: ' + this.score);
+                this.sound.play('explosion');
             });
         }
 

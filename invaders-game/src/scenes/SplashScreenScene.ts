@@ -1,5 +1,4 @@
 import Phaser from 'phaser';
-import { GameScene } from './GameScene';
 
 export class SplashScreenScene extends Phaser.Scene {
     constructor() {
@@ -7,7 +6,7 @@ export class SplashScreenScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('splash', 'assets/splash.png');
+        this.load.image('splash', 'assets/images/splash.png');
     }
 
     create() {
