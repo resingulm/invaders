@@ -31,6 +31,31 @@ SDD's structured approach ensures that the output from GenAI agents remains alig
 
 The classic "**Invaders**" arcade game was successfully developed as a web browser application using SDD, with Google Gemini guided by the **SpecKit** framework. SpecKit enforces a strict workflow: **Specify → Plan → Tasks → Implement**.
 
+### How to Run the Game
+
+To run the Invaders game locally:
+
+1. Navigate to the game directory:
+
+    ```bash
+    cd invaders-game
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Start the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+4. Open your browser to the address provided by `vite` (usually `http://localhost:5173/`).
+    * **Game Link**: [http://localhost:5173/](http://localhost:5173/)
+
 The core specification defined a strict set of **guardrails**:
 
 * **Technology Stack:** Use the **Phaser** game framework.
