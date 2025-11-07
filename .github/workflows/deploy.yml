@@ -16,15 +16,18 @@ jobs:
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
     - name: Checkout
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '20'
     - name: Install dependencies and Deploy
+      working-directory: ./invaders-game
       run: |
-        cd invaders-game
         npm install
         npm run deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
