@@ -18,10 +18,15 @@ jobs:
       with:
         node-version: '20'
 
+    - name: Configure Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
     - name: Install dependencies and Deploy
       run: |
         cd invaders-game
         npm install
         npm run deploy
       env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
