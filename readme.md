@@ -69,6 +69,8 @@ Spec-Driven Development is rapidly moving from an academic concept to a standard
 
 ## 🚀 How to Run the Game
 
+### 1. Local
+
 To run the Invaders game locally:
 
 1. Navigate to the game directory:
@@ -91,3 +93,9 @@ To run the Invaders game locally:
 
 4. Open your browser to the address provided by `vite` (usually `http://localhost:5173/`).
     * **Game Link**: [http://localhost:5173/](http://localhost:5173/)
+
+### 2. GitHub Page
+
+You can also play the game directly online via GitHub Pages:
+
+* **Live Game Link**: [https://resingulm.github.io/invaders/](https://resingulm.github.io/invaders/)
