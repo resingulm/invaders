@@ -11,6 +11,7 @@
   - **Game Engine**: Phaser 3. This is a popular, open-source HTML5 game framework, which aligns with our "Web First" and "Open Source" principles.
   - **Language**: TypeScript. We will use TypeScript for its static typing, which helps in developing more robust and maintainable code, especially for a project that might grow.
   - **Build Tool**: Vite. For a fast development server and optimized builds.
+  - **Assets**: Use open-source assets from sites like OpenGameArt.org to comply with the "Open Source" principle.
 - **Key Dependencies**:
   - `phaser`: The core game engine.
   - `typescript`: The language.

@@ -48,6 +48,7 @@ The "Invaders" project provided valuable insights into the current state of GenA
 1. **Token Hungry:** SDD requires a **high number of tokens**. The full specification, technical plan, task breakdown, and the continuous context of the project's constitution must be sent to the LLM with almost every generation request.
 2. **Manual Intervention (Not Required):** Initial implementations sometimes resulted in compiler or runtime errors. Crucially, **no manual human coding fixes were necessary**. The errors were fed back to the GenAI agent (via the SpecKit workflow), which used its context to diagnose and resolve the issues, preserving the "AI-only fix" philosophy.
 3. **Issue with Sprites/Images:** A challenge arose with game assets: the GenAI attempted to generate the sprite images itself, resulting in **corrupt files** (only placeholders were displayed). This was resolved by modifying the spec and submitting an **additional query** instructing the AI to use **publicly available, open-source images** for the sprites instead of generating new ones.
+4. **Slower Development Cycle:** The SDD process, with its multiple phases (specification, planning, task generation, implementation, testing), is inherently **slower** than traditional coding or even prompt-based GenAI coding. However, this tradeoff is justified by the **higher quality, maintainability, and compliance** of the resulting software.
 
 ---
 
