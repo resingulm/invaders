@@ -96,6 +96,6 @@ To run the Invaders game locally:
 
 ### 2. GitHub Page
 
-You can also play the game directly online via GitHub Pages. Unfortuneately, GitHub Actions are disabled on ibm github. I also published the code and the game on my personal GitHub account.
+You can also play the game directly online via GitHub Pages. Unfortuneately, GitHub Actions are disabled on IBM github. I also published the code and the game on my personal GitHub account.
 
 * **Live Game Link**: [https://resingulm.github.io/invaders/](https://resingulm.github.io/invaders/)
